@@ -1,0 +1,21 @@
+#Entramos al directorio del Dockerfile	
+cd folder docker build -t "imagen":"tag"
+
+#En el puerto 3000 estara corriendo el contenedor con la imagen
+	docker run -dp 3000:3000 --name "nombre_contenedor" imagen:tag
+
+#para ver si estas corriendo contenedores
+	docker ps
+
+#Detener la ejecucion de la App
+ docker stop "identificador del contenedor"
+
+#Reinicio del contenedor
+	docker restart "nombre_contenedor"
+
+#Para entrar dentro de la terminal del contenedor
+docker run -it nombre_contenedor ejemplo (tokensnft:v1) bash
+
+#Eliminar contenedor (ojo detener antes de eliminarlo, el volumen no se eliminara
+			por lo q podremos entrar a verlo)
+docker rm "nombre_contenedor"
